@@ -86,5 +86,5 @@ class BasicSimulation extends Simulation {
       session
     })
 
-  setUp(scn.inject(atOnceUsers(10)).protocols(httpConf))
+  setUp(scn.inject(constantUsersPerSec(5) during 60).protocols(httpConf))
 }
