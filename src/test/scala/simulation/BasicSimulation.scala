@@ -14,10 +14,10 @@ class BasicSimulation extends Simulation {
 
     .exec(http("getAuthentication")
       .post("http://" + System.getenv("AUTH_HOST") + "/auth/realms/springboot/protocol/openid-connect/token")
-      .formParam("""client_id""", """activiti""")
-      .formParam("""grant_type""", """password""")
-      .formParam("""username""", """hruser""")
-      .formParam("""password""", """password""")
+      .formParam("client_id", "activiti")
+      .formParam("grant_type", "password")
+      .formParam("username", "hruser")
+      .formParam("password", "password")
       .check(jsonPath("$..access_token").ofType[String].saveAs("token"))
     )
 
