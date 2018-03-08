@@ -15,3 +15,5 @@ setUp(scn.inject(constantUsersPerSec(5) during 60).protocols(httpConf))
 
 Note also the presence of pause() in the code, 
 that can be adjusted or removed or added to other places based on your expectations.
+
+After the test execution the report will be available under ```target/gatling/basicsimulation-{id}```
